@@ -62,10 +62,10 @@ $(function () {
                         });
 
                 $(document).on('click', '.add-to-route', function () {
-                        $('#route i').hide();
+                        $('#first').hide();
                         $('#routeFooter').show();
                         var data = $(this).data();
-                        $('<div class="routeItem">' + data.name + '</div>')
+                        $('<li class="list-group-item">' + data.name + '</li>')
                                 .data(data).appendTo($('#route'));
                         return false;
                 });

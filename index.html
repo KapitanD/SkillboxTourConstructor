@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html>
+
 <head>
         <title>Конструктор путешествий</title>
+        <!--Meta tags for bootstrap-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+                integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+                crossorigin="anonymous">
+        <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=76fdb50a-7b5e-424d-b619-a598bfd57c42&lang=ru_RU" type="text/javascript"></script>
+        <!--Yandex.Maps script-->
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=76fdb50a-7b5e-424d-b619-a598bfd57c42&lang=ru_RU"
+                type="text/javascript"></script>
+        <!--Our script and CSS-->
         <script src="script.js"></script>
         <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-	<h1>Планировщик путешествий</h1>
-	<div id="columns">
-		<div>
-			<div>
-				<b>Введите название города:</b>&nbsp;<input type="text" name="city" id="city">&nbsp;<input type="button" id="getPointsButton" value="Найти">
-			</div>
-			<br>
-			<div id="map" style="width: 600px; height: 400px"></div>
-		</div>
-		<div>
-			<h2>Сохранённые маршруты:</h2>
-			<div id="savedRoutes">
-				<i>Нет сохранённых маршрутов</i>
-			</div>
-			<br>
-			<h2>Новый маршрут:</h2>
-			<div id="route">
-				<i>Нажимайте на точки на карте и добавляйте их в маршрут</i>
-			</div>
-			<div id="routeFooter">
-				<b>Введите название маршрута:</b>&nbsp;<input type="text" name="tripName" id="tripName">&nbsp;<input type="button" id="saveRouteButton" value="Сохранить">
-			</div>
-		</div>
-	</div>
+        <h1>Планировщик путешествий</h1>
+        <div id="columns">
+                <div>
+                        <div class="input-group mb-3" id="cityInput">
+                                <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button"
+                                                id="getPointsButton">Найти</button>
+                                </div>
+                                <input name="city" id="city" type="text" class="form-control"
+                                        placeholder="Введите название города" aria-label="CityName"
+                                        aria-describedby="getPointsButton">
+                        </div>
+                        <br>
+                        <div id="map" style="width: 600px; height: 400px"></div>
+                </div>
+                <div>
+                        <h2>Сохранённые маршруты:</h2>
+                        <div id="savedRoutes">
+                                <i>Нет сохранённых маршрутов</i>
+                        </div>
+                        <br>
+                        <h2>Новый маршрут:</h2>
+                        <li class="list-group-item" id="first"><i>Нажимайте на точки на карте и
+                                добавляйте их в маршрут</i></li>
+                        <ul class="list-group mb-3" id="route">
+                        </ul>
+
+
+                        <div id="routeFooter">
+                                <div class="input-group mb-3">
+                                        <input name="tripName" id="tripName" type="text" class="form-control"
+                                                placeholder="Введите название маршрута" aria-label="RouteName"
+                                                aria-describedby="saveRouteButton">
+                                        <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary" type="button"
+                                                        id="saveRouteButton">Сохранить</button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+                crossorigin="anonymous"></script>
 </body>
+
 </html>
