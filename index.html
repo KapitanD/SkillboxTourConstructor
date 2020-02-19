@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Конструктор путешествий</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=76fdb50a-7b5e-424d-b619-a598bfd57c42&lang=ru_RU" type="text/javascript"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<h1>Планировщик путешествий</h1>
+	<div id="columns">
+		<div>
+			<div>
+				<b>Введите название города:</b>&nbsp;<input type="text" name="city" id="city">&nbsp;<input type="button" id="getPointsButton" value="Найти">
+			</div>
+			<br>
+			<div id="map" style="width: 600px; height: 400px"></div>
+		</div>
+		<div>
+			<h2>Сохранённые маршруты:</h2>
+			<div id="savedRoutes">
+				<i>Нет сохранённых маршрутов</i>
+			</div>
+			<br>
+			<h2>Новый маршрут:</h2>
+			<div id="route">
+				<i>Нажимайте на точки на карте и добавляйте их в маршрут</i>
+			</div>
+			<div id="routeFooter">
+				<b>Введите название маршрута:</b>&nbsp;<input type="text" name="tripName" id="tripName">&nbsp;<input type="button" id="saveRouteButton" value="Сохранить">
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.add-to-route {
+        color: blue;
+        text-decoration: none;
+        border-bottom: 1px dashed blue;
+}
+#routeFooter {
+        display: none;
+}
+#map {
+        width: 600px;
+        height: 400px;
+        margin-right: 40px;
+}
+.routeItem {
+        border: 1px solid #333;
+        padding: 5px;
+        width: 400px;
+        margin: 0 0 5px;
+}
+#columns {
+        display: flex;
+}
