@@ -6,4 +6,4 @@
 ## Используемые технологии
  - HTML/CSS
  - JavaScript
- - ...
+ - Php (Symphony)
